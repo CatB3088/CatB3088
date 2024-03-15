@@ -1,0 +1,371 @@
+/* General styles */
+@font-face {
+    font-family: 'prstartk';
+    src: url(prstartk.ttf) format('truetype');
+}
+
+body {
+    font-family: 'prstartk',Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+
+  nav {
+    background-color: black;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.5s;
+  }
+
+  nav a:hover {
+    color: yellow;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  section {
+    padding: 20px;
+  }
+  /* divider*/
+  .section-divider {
+    border-top: 2px solid yellow;
+  }
+  
+  .home {
+    text-align: center;
+  }
+
+  .highscore{
+    text-align: center;
+    border-top: 2px solid yellow;
+  }
+  
+  /* High Scores Section styles */
+  .highscores {
+    text-align: center;
+  }
+
+  .highscore-table-container {
+    width: 100%; 
+  }
+  
+  .highscore-table {
+    width: 100%; 
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  .home {
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 70%; 
+  }
+  
+  .game-animation {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    height: 100px; 
+  }
+  
+  .ghost,
+  .pacman {
+    width: 20px; 
+    height: auto;
+    position: absolute;
+    top: 70%; 
+    left: 70%;
+    transform: translateY(-50%);
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes chase {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  .ghost1 {
+    left: 0;
+    animation-name: chase;
+  }
+  .ghost2 {
+    left: 33%;
+    animation-name: chase;
+  }
+  .ghost3 {
+    left: 66%;
+    animation-name: chase;
+  }
+  .pacman {
+    animation-name: chase-reverse;
+  }
+  @keyframes chase-reverse {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 49% {
+      opacity: 1;
+    }
+    50%, 100% {
+      opacity: 0;
+    }
+  }
+  .blink {
+    animation: blink 1s infinite;
+    color: white;
+  }
+
+  /*Score Section*/
+  .highscores {
+    text-align: center;
+  }
+  
+  .title {
+    color: #ffff00; 
+  }
+  
+  .subtitle {
+    color: white;
+  }
+  
+  .highscore-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  .highscore-table th,
+  .highscore-table td {
+    padding: 10px;
+    border: 10px solid black;
+  }
+
+  
+  .highscore-table tbody tr:nth-child(4n) {
+    color: #ffff00; 
+  }
+  
+  .highscore-table tbody tr:nth-child(4n + 2) {
+    color: #ff69b4; 
+  }
+  
+  .highscore-table tbody tr:nth-child(4n + 3) {
+    color: #00ff00; 
+  }
+  
+  
+  .highscore-table tbody tr:nth-child(4n + 4) {
+    color: #ff4500; 
+  }
+
+  .highscore-table tbody tr:nth-child(4n + 5) {
+    color: purple;
+  }
+
+  .highscore-table tbody tr:nth-child(4n + 1) {
+    color: blue;
+  }
+
+  /* How to Play Section styles */
+.howtoplay {
+    text-align: center;
+  }
+  
+  .howtoplay .game-animation {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .howtoplay .ghost,
+  .howtoplay .pacman {
+    width: 50px; 
+    height: auto;
+    position: absolute;
+    top: 50%;
+    animation-duration: 5s; 
+    animation-timing-function: linear; 
+    animation-iteration-count: infinite; 
+  }
+  
+  @keyframes chase-howtoplay {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .howtoplay .ghost1,
+  .howtoplay .ghost2,
+  .howtoplay .ghost3,
+  .howtoplay .ghost4,
+  .howtoplay .pacman {
+    animation-name: chase-howtoplay;
+  }
+  
+  .howtoplay .ghost1 {
+    left: 0;
+  }
+  
+  .howtoplay .ghost2 {
+    left: 35%;
+  }
+  
+  .howtoplay .ghost3 {
+    left: 55%;
+  }
+  
+  .howtoplay .ghost4 {
+    left: 75%;
+  }
+  
+  .howtoplay .pacman {
+    animation-name: chase-howtoplay-reverse;
+  }
+  
+  @keyframes chase-howtoplay-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .howtoplay {
+    text-align: center;
+  }
+  
+  .howtoplay p {
+    color: white; 
+    padding: 50px;
+  }
+
+  .howtoplay h1{
+    color: white;
+    padding-top: 40px;
+  }
+  
+  .howtoplay p::first-line {
+    text-transform: uppercase;
+    color: yellow; 
+  }
+
+  /*section divider*/
+  .section-divider {
+    border-top: 2px solid yellow; 
+  } 
+  
+/* Players Section styles */
+.players {
+    text-align: center;
+  }
+  
+  .players-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .players-title,
+  .characters-nicknames-title {
+    color: white; 
+  }
+  
+  .players-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .players-list li .character {
+    margin-right: 60px; 
+  }
+  
+  .players-list li {
+    display: flex; 
+    align-items: center; 
+  }
+
+  .players-list li img {
+    width: 50px;
+    height: auto; 
+    margin-right: 10px; 
+  }
+  
+  .players-list li img {
+    margin-right: 10px; 
+  }
+  
+  .players-list li:nth-of-type(odd) {
+    color: red; 
+  }
+  
+  .players-list li:nth-of-type(even) {
+    color: blue; 
+  }
+
+  .points-container {
+    text-align: center;
+    margin-top: 40px; 
+  }
+  
+  .points-and-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .points-text {
+    color:white; 
+    margin-right: 30px; 
+  }
+  
+  .eaten-image {
+    width: 50px; 
+    height: auto;
+  }
+  
+  .yellow-square {
+    width: 20px;
+    height: 20px; 
+    background-color: yellow; 
+  }
+  
+  .small-yellow-square {
+    width: 8px; 
+    height: 8px; 
+    background-color: yellow; 
+  }
+  
+  /*footer*/
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 5px;
+  }
